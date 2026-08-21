@@ -212,7 +212,8 @@ if st.session_state["screen"] == "onboarding":
             st.session_state["profile"]["id"]=st.session_state["user_id"]
             vt=build_vt(st.session_state["profile"],{},[],[],"vt0")
             result=get_recommendations(st.session_state["user_id"],ALL_TRIPS+[vt])
-            st.session_state["rec_result"]=result
+            st.session_state["rec_result"] = result
+            go("recommendations"); st.rerun()
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SCREEN 2 — RECOMMENDATIONS
